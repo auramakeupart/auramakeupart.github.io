@@ -1,0 +1,183 @@
+body {
+  background: #444;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  color: rgb(234, 243, 0);
+  font-family: 'Plaster', cursive;
+  font-size: 2em;
+  position: relative;
+  text-align: center;
+}
+
+.logo > h1 > a {
+  text-decoration: none !important;
+  color: rgb(234, 243, 0);
+}
+
+.logo > h1 > a:hover {
+  text-decoration: none !important;
+  color: rgb(0, 182, 195);
+}
+
+h1 {
+  padding-top: 0;
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+.sidenav {
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 182, 195);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+  color: rgb(234, 243, 0);
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  font-family: 'Roboto', sans-serif;
+  transition: margin-left .5s;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.accordion {
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.panel {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    color: white;
+    text-align: justify;
+}
+
+.a-contact {
+  padding: 0 !important;
+  font-size: 17px !important;
+}
+
+ul {
+  list-style: none;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+ul li {
+  float: left;
+  width: 16.666%;
+  height: 600px;
+  opacity: 0.4;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+ul li:hover, ul li:first-child ~ li:last-child {
+  width: 50%;
+  opacity: 1;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+ul li:hover ~ li:last-child {
+  width: 16.666%;
+  opacity: 0.4;
+}
+ul li:nth-child(1) {
+  background: url(./assets/1.jpg) top center no-repeat;
+}
+ul li:nth-child(2) {
+  background: url(./assets/2.jpg) top right no-repeat;
+}
+ul li:nth-child(3) {
+  background: url(./assets/3.jpg) top center no-repeat;
+}
+ul li:nth-child(4) {
+  background: url(./assets/4.jpg) top center no-repeat;
+}
+
+.quad {
+  background-color: #000;
+  font-size: 0; width: 60%;
+  margin: 0 auto;
+  box-shadow: 0 0 12px rgba(0,0,0,0.8);
+}
+.quad figure {
+  margin: 0; width: 50%;
+  height: auto; transition: 1s;
+  display: inline-block;
+  position: relative; overflow: hidden;
+}
+.quad figure:hover {
+  cursor: pointer; z-index: 4;
+}
+.quad figure img {
+  width: 100%; height: auto;
+}
+
+.expanded {
+  transform: scale(2); z-index: 5;
+}
+.quad figure.expanded figcaption {
+  opacity: 1;
+}
+.full figure:not(.expanded) {
+  pointer-events: none;
+}
+
+footer {
+  text-align: center;
+  margin: 0 auto;
+}
+
+footer > p {
+  color: rgb(234, 243, 0);
+  font-family: 'Plaster';
+  text-decoration: none !important;
+}
+
+footer > p > a {
+  color: rgb(234, 243, 0);
+  text-decoration: none !important;
+
+}
+footer > p > a:hover {
+  color: rgb(0, 182, 195);
+  text-decoration: none !important;
+}

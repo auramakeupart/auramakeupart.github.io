@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura A Make Up Art</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Plaster|Roboto" rel="stylesheet">
+</head>
+<body>
+  <div id="main">
+    <span style="font-size:30px;cursor:pointer;color:rgb(234, 243, 0)" onclick="openNav()">&#9776; open</span>
+  </div>
+      <div class="logo">
+        <h1><a href="index.html">Aura Make Up Art</a></h1>
+      </div>
+    <div id="side-nav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a class="accordion" href="index.html">Home</a>
+      <a class="accordion" href="#">About</a>
+      <div class="panel">
+        <img style="width:200px" src="assets/about.png">
+        <p>
+          Aura is a professionally trained makeup artist. She began her career in
+          2013 assisting and training under several well known professionals in the
+          beauty industry. She went on to graduate from Make Up For Ever Academy
+          Paris and continues her training attending yearly Makeup Artistry Seminars and Workshops.
+          Her work has been seen on TV, print, and the faces of beautiful brides all over the world.
+          She also serves as a Makeup Educator holding popular beauty seminars and one-on-one classes.
+          She is skilled, well-informed, as well as passionate about her craft,
+          and this has helped her achieve her success.
+        </p>
+      </div>
+      <a class="accordion" href="gallery.html">Gallery</a>
+      <a class="accordion" href="#">Contact</a>
+      <div class="panel">
+        <a class="a-contact" href="mailto:auramakeupart@gmail.com">auramakeupart@gmail.com<a>
+        <a class="a-contact" href="tel:+37069370797">+370 693 70797</a>
+      </div>
+      <a class="accordion" href="https://www.instagram.com/auramakeupart/">Instagram</a>
+      <a class="accordion" href="https://www.facebook.com/auramakeupart/">Facebook</a>
+    </div>
+    <div id="quad" class="quad">
+      <figure>
+        <img src="assets/gallery/1.jpg">
+      </figure>
+      <figure>
+        <img src="assets/gallery/2.jpg">
+      </figure>
+      <figure>
+        <img src="assets/gallery/5.jpg">
+      </figure>
+      <figure>
+        <img src="assets/gallery/4.jpg">
+      </figure>
+      <figure>
+        <img src="assets/gallery/7.jpg">
+      </figure>
+      <figure>
+        <img src="assets/gallery/8.jpg">
+      </figure>
+      <figure>
+        <img src="assets/gallery/9.jpg">
+      </figure>
+      <figure>
+        <img src="assets/gallery/10.jpg">
+      </figure>
+      <figure>
+        <img src="assets/gallery/11.jpg">
+      </figure>
+      <figure>
+        <img src="assets/gallery/12.jpg">
+      </figure>
+      <figure>
+        <img src="assets/gallery/3.jpg">
+      </figure>
+      <figure>
+        <img src="assets/gallery/6.jpg">
+      </figure>
+    </div>
+    <footer>
+      <p>Designed by <a href="http://www.vampayasoft.com">VampayaSoft</a></p>
+    </footer>
+  <script>
+function openNav() {
+  document.getElementById('side-nav').style.width = '250px';
+}
+
+function closeNav() {
+  document.getElementById('side-nav').style.width = '0';
+}
+
+var acc = document.getElementsByClassName('accordion');
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function () {
+    this.classList.toggle('active');
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+    }
+  };
+}
+
+var quadimages = document.querySelectorAll('#quad figure');
+for (i = 0; i < quadimages.length; i++) {
+  quadimages[i].addEventListener('click', function () {
+    this.classList.toggle('expanded'); quad.classList.toggle('full');
+  });
+}
+  </script>
+</body>
+</html>
